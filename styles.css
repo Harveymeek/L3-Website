@@ -1,245 +1,45 @@
 html {
-    background-image: linear-gradient(white, white, rgba(3, 213, 255), rgba(3, 213, 255));  /* makes the background of the entire website a liner gradient */
+    background-image: url("images/bg1.png");
+    background-size: 230vh 55vw;
 }
 
-@font-face { /* established the font family and the url */
-    font-family: myFont;
-    src: url(fonts/Valorant\ Font.ttf);
-}
 
-html { /* makes all of the text on the website have the established font family */
-    font-family: myFont; 
-}
-
-a:hover { /* makes a hover state for the nav links */
-    color: grey;
-}
-
-.container { /* creates the main container and establishes all of the grid template rows and column values for the home page */
+.container {
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 27vh 50vh 7vh 8vh 7vh;
+    grid-template-columns: 0.5fr 10fr;
+    grid-template-rows: 20vh 78vh;
 }
 
-.container1 { /* creates the main container and establishes all of the grid template rows and column values for the products page */
+.box2 {
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 27vh 75vh;
-}
-
-.container2 { /* creates the main container and establishes all of the grid template rows and column values for the sizing page */
-    display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
-    grid-template-rows: 27vh 65vh;
-}
-
-.box1 { /* creates the main display box on the home page and establishes its grid template columns, backgorund color, position, border color, padding and drop shadows */
-    display: grid;
-    grid-template-columns: 1fr 0.175fr 2fr;
-    background-color: lightgray;
-    grid-row: 2/2;
-    grid-column: 3/2;
-    border: 0.6vw solid black;
-    padding: 0.6vw;
-    box-shadow: 0.3vw 0.6vw 1.2vw;
-}
-
-.box2 {  /* creates the box at the bottom of the home page for the extra info and establishes its grid template columns, rows, color, position, border color and drop shadow */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3vw;
-    background-color: lightgrey;
-    grid-row: 5/4;
+    grid-template-columns: 1fr 4fr;
+    grid-row: 1/2;
     grid-column: 2/2;
-    border: 0.6vw solid black;
-    box-shadow: 0.3vw 0.6vw 1.2vw;
-
+    
 }
 
-.box3 { /* creates the grid which contains the grid rows and columns for seperating and displaying the logo and nav links and establishes its position */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row: 1/2;
-    grid-column: 2/3;
-
-}
-
-.logo { /* establishes the position and the height of the logo on the top left of the website */
-    grid-row: 1/2;
-    grid-column: 2/1;
-    height: 25vh;
-}
-
-nav { /* creates the box which contains the nav links and establishes its position, color, size, padding and drop shadow */
-    grid-row: 1/2;
-    grid-column: 2/3;
-    background-color: lightgray;
-    align-self: center;
-    justify-self: center;
-    width: 100%;
-    text-align: center;
-    padding: 1.2vw 0.6vw;
-    border: 0.6vw solid black;
-    box-shadow: 0.3vw 0.6vw 1.2vw;
-}
-
-nav a { /* establishes the position, size and color of the links in the nav */
-    margin: 4vw;
-    font-size: 2.3vh;
-    text-decoration: none;
-    color: black;
-}
-
-.dproduct { /* establishes the height and the position of the display product image */
-    height: 45vh;
-    justify-self: center;
-}
-
-.line { /* established the width, height, color and position of the line in the main dislpay box */
-    border-left: 0.2vw solid black;
-    grid-column: 2/3;
-    height: 44vh;
-}
-
-.text { /* makes all text in the main display box sit in the center */
-    justify-self: center;
-}
-
-h1 { /* establishes the size and position of the h1 text in the main display box on the home page */
-    font-size: 3vw;
-    justify-self: center;
-}
-
-h2 { /* establishes the size and position of the h2 text in the main display box on the home page */
-    font-size: 3vh;
-}
-
-.text2 { /* establishes the font size and position for the first bit of text at the bottom of the home page */
-    font-size: 3vh; 
-    justify-self: center;
-    align-self: center;
-}
-
-.text3 { /* establishes the font size and position for the second bit of text at the bottom of the home page */
-    font-size: 3vh; 
-    justify-self: center;
-    align-self: center;
-}
-
-.text4 { /* establishes the font size and position for the third bit of text at the bottom of the home page */
-    font-size: 1.7vh;
-    justify-self: center;
-    align-self: center;
-}
-
-.grey { /* makes the text in the strong class: grey, grey */
-    color: grey;
-}
-
-strong { /* makes the text in the strong tag white */
-    color: white;
-}
-
-.box5 { /* establishes the position of box5 and creates the grid rows and columns inside box5 for the display boxes */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column: 2/2;
-    grid-row: 2/2;
-}
-
-.box5>div { /* creates the drop shadow for box5 */
-    box-shadow: 0.3vw 0.6vw 1.2vw;
-}
-
-.d1 { /* establishes the position, color, border color and padding of display box 1 on products page */
+.logo {
+    grid-row: 1/1;
     grid-column: 1/2;
-    background-color: lightgrey;
-    border: 0.6vw solid black;
-    margin-left: 1.2vw;
-    margin-right: 1.2vw;
+    height: 20vh;
+
 }
 
-.d1>h1 { /* sets the font size and position of the first line of text in display box 1 on products page */
-    font-size: 2.5vh;
-    text-align: center;
-}
 
-.d1>h2 { /* sets the font size and position of the second line of text in display box 1 on products page */
-    font-size: 2.5vh;
-    text-align: center;
-}
-
-.d2 { /* establishes the position, color, border color and padding of display box 2 on products page */
+nav {
+    grid-row: 1/1;
     grid-column: 2/2;
-    background-color: lightgrey;
-    border: 0.6vw solid black;
-    margin-left: 1.2vw;
-    margin-right: 1.2vw;
+    background-color: grey;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    padding: 0.6vw 0.6vw;
 }
 
-.d2>h1 { /* sets the font size and position of the first line of text in display box 2 on products page */
-    font-size: 2.5vh;
-    text-align: center;
+nav a {
+    margin: 10vw;
     color: white;
+    text-decoration: none;
+    font-size: 2.8vh;
 }
 
-.d2>h2 { /* sets the font size and position of the second line of text in display box 2 on products page */
-    font-size: 2.5vh;
-    text-align: center;
-}
-
-.d3 { /* establishes the position, color, border color and padding of display box 3 on products page */
-    background-color: lightgrey;
-    border: 0.6vw solid black;
-    margin-left: 1.2vw;
-    margin-right: 1.2vw;
-}
-
-.d3>h1 { /* sets the font size and position of the first line of text in display box 3 on products page */
-    font-size: 2.5vh;
-    text-align: center;
-    color: grey;
-}
-
-.d3>h2 { /* sets the font size and position of the second line of text in display box 3 on products page */
-    font-size: 2.5vh;
-    text-align: center;
-}
-
-.p1 { /* sets the size and position of product 1 image */
-    height: 25vw;
-    justify-self: center;
-    padding-left: 2vw;
-    padding-top: 2vh;
-    padding-right: 3vh
-}
-
-.p2 { /* sets the size and position of product 2 image */
-    height: 25vw;
-    justify-self: center;
-    padding-top: 2vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-}
-
-.p3 { /* sets the size and position of product 3 image */
-    height: 25vw;
-    justify-self: center;
-    padding-top: 2vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-}
-
-.counter { /* makes the counter display in the center */
-    justify-self: center;
-}
-
-.box27 { /* creates box that contains the size calculator and establishes its varialbes */
-    grid-column: 2/2;
-    grid-row: 2/2;
-    background-color: lightgrey;
-    border: 0.6vw solid black;
-    box-shadow: 0.3vw 0.6vw 1.2vw;
-}
