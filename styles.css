@@ -3,6 +3,14 @@ html {
     background-size: 230vh 55vw;
 }
 
+@font-face {
+    font-family: navFont;
+    src: url(fonts/Nexa-Heavy.ttf);
+}
+
+nav a {
+    font-family: navFont;
+}
 
 .container {
     display: grid;
@@ -15,7 +23,7 @@ html {
     grid-template-columns: 1fr 4fr;
     grid-row: 1/2;
     grid-column: 2/2;
-    
+
 }
 
 .box3 {
@@ -29,13 +37,15 @@ html {
     grid-row: 1/1;
     grid-column: 1/2;
     background-color: grey;
+    border-radius: 2.5vw;
+    opacity: .9;
 }
 
 .logo {
     grid-row: 1/1;
     grid-column: 1/2;
     height: 20vh;
-    align-self: center; 
+    align-self: center;
 
 }
 
@@ -44,17 +54,18 @@ nav {
     grid-row: 1/1;
     grid-column: 2/2;
     background-color: grey;
+    opacity: .9;
     align-self: center;
     justify-self: center;
     text-align: center;
     padding: 0.6vw 0.6vw;
     border-radius: 25vw;
+
 }
 
 nav a {
-    margin: 10vw;
+    margin: 9vw;
     color: white;
     text-decoration: none;
     font-size: 2.8vh;
 }
-
