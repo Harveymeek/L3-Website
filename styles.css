@@ -43,6 +43,7 @@ a:hover {
     background-color: #4D4D4F;
     border-radius: 2.5vw;
     opacity: .9;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
 }
 
 h1 {
@@ -75,6 +76,7 @@ nav {
     text-align: center;
     padding: 0.6vw 0.6vw;
     border-radius: 25vw;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
 
 }
 
