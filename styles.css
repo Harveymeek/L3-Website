@@ -8,7 +8,7 @@ html {
     src: url(fonts/Nexa-Heavy.ttf);
 }
 
-nav a {
+nav a, h1 {
     font-family: navFont;
 }
 
@@ -36,11 +36,22 @@ nav a {
 .tbox {
     grid-row: 1/1;
     grid-column: 1/2;
-    background-color: grey;
+    background-color: #4D4D4F;
     border-radius: 2.5vw;
     opacity: .9;
 }
 
+h1 {
+    margin: 2vw;
+    font-size: 2.5vw;
+    color: white;
+}
+
+p {
+    margin: 2vw;
+    font-size: 1vw;
+    color: white;
+}
 .logo {
     grid-row: 1/1;
     grid-column: 1/2;
@@ -53,7 +64,7 @@ nav a {
 nav {
     grid-row: 1/1;
     grid-column: 2/2;
-    background-color: grey;
+    background-color: #4D4D4F;
     opacity: .9;
     align-self: center;
     justify-self: center;
