@@ -12,6 +12,10 @@ nav a, h1 {
     font-family: navFont;
 }
 
+a:hover {
+    color: black;
+}
+
 .container {
     display: grid;
     grid-template-columns: 0.5fr 10fr;
