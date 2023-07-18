@@ -8,15 +8,24 @@ html {
     src: url(fonts/Nexa-Heavy.ttf);
 }
 
+@font-face {
+    font-family: textFont;
+    src: url(fonts/Calibri\ Regular.ttf);
+}
+
 nav a, h1 {
     font-family: navFont;
+}
+
+p {
+    font-family: textFont;
 }
 
 a:hover {
     color: black;
 }
 
-.container {
+.container { /* creates the main container and establishes all of the grid template rows and column values for the home page */
     display: grid;
     grid-template-columns: 0.5fr 10fr;
     grid-template-rows: 20vh 5vh 73vh;
@@ -62,7 +71,6 @@ p {
     grid-column: 1/2;
     height: 20vh;
     align-self: center;
-
 }
 
 
