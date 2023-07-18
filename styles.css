@@ -47,6 +47,8 @@ a:hover {
 }
 
 .tbox {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
     grid-row: 1/1;
     grid-column: 1/2;
     background-color: #4D4D4F;
@@ -55,15 +57,20 @@ a:hover {
     box-shadow: 0.3vw 0.6vw 1.2vw;
 }
 
+.scug1 {
+    height: 20vh;
+    
+}
+
 h1 {
     margin: 2vw;
-    font-size: 2.5vw;
+    font-size: 5vh;
     color: white;
 }
 
 p {
     margin: 2vw;
-    font-size: 1vw;
+    font-size: 2.3vh;
     color: white;
 }
 .logo {
@@ -85,7 +92,6 @@ nav {
     padding: 0.6vw 0.6vw;
     border-radius: 25vw;
     box-shadow: 0.3vw 0.6vw 1.2vw;
-
 }
 
 nav a {
