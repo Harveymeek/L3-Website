@@ -1,6 +1,6 @@
 html {
     background-image: url("images/bg1.png");
-    background-size: 230vh 55vw;
+    background-size: 110vw 110vh;
 }
 
 @font-face {
@@ -13,16 +13,20 @@ html {
     src: url(fonts/Calibri\ Regular.ttf);
 }
 
-nav a, h1 {
+nav a, h1, h2 {
     font-family: navFont;
 }
 
-p {
+p, .qlinks a {
     font-family: textFont;
 }
 
-a:hover {
+a:hover, .qlinks a:hover {
     color: black;
+}
+
+form {
+    margin: 1.5vw;
 }
 
 .container { /* creates the main container and establishes all of the grid template rows and column values for the home page */
@@ -36,7 +40,6 @@ a:hover {
     grid-template-columns: 1fr 4fr;
     grid-row: 1/2;
     grid-column: 2/2;
-
 }
 
 .box3 {
@@ -59,13 +62,18 @@ a:hover {
 
 .scug1 {
     height: 20vh;
-    
 }
 
 h1 {
     margin: 2vw;
     font-size: 5vh;
     color: white;
+}
+
+h2 {
+    font-size: 3vh;
+    color: white;
+    margin: 1.5vw;
 }
 
 p {
@@ -81,9 +89,21 @@ p {
 }
 
 .qlinks { 
+    display: grid;
+    grid-template-rows: 0.4fr 0.5fr 1fr;
     grid-column: 2/3;
     background-color: grey;
+    border-radius: 2.5vw;
+    background-color: #4D4D4F;
+    opacity: .9;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
+}
 
+.qlinks2 {
+    grid-row: 2/3;
+}
+.qlinks3 {
+    grid-row: 3/3;
 }
 
 .logo {
@@ -92,7 +112,6 @@ p {
     height: 20vh;
     align-self: center;
 }
-
 
 nav {
     grid-row: 1/1;
@@ -112,4 +131,12 @@ nav a {
     color: white;
     text-decoration: none;
     font-size: 2.8vh;
+}
+
+.qlinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.3vh;
+    margin: 1.5vw;
+    
 }
