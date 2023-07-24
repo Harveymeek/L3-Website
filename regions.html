@@ -5,21 +5,25 @@
         Regions
     </title>
     <link rel="stylesheet" href="styles.css">
+    <!--links the stylesheet to home.html-->
 </head>
 
 <body class="regions">
 
     <div class="container">
+        <!-- the main grid which contains all of the grid rows and columns on the website-->
 
         <div class="box2c">
 
             <img src="images/logo.png" alt="logo1" class="logo">
+            <!--link for the logo img-->
 
             <nav>
                 <a href="home.html">Home</a>
                 <a href="creatures.html">Creatures</a>
                 <a href="regions.html">Regions</a>
             </nav>
+            <!--links for the nav bar-->
         </div>
 
         <div class="box3">
@@ -52,7 +56,7 @@
                     <p>Five Pebbles</p>
                     <img src="images/sub.png" alt="glizard1" class="cimg2"><br>
                     <p>Subterranean</p>
-
+                    <!--list of images and text-->
                 </div>
                 <div class="tbox2b">
                     <div class="tbox3">
@@ -75,6 +79,7 @@
                             <input id="search" type="text" class="input" placeholder="search..." />
                             <button id="clear" class="clear-results">clear</button>
                         </form><br>
+                        <!--creates the input field and clear button-->
                     </div>
                     <div class="qlinks2">
                         <ul class="results-list" id="list">
@@ -88,6 +93,7 @@
                         <a href="creatures.html">Noodlefly</a><br><br>
                         <a href="regions.html">Outskirts</a><br><br>
                         <a href="creatures.html">Brother Long Legs</a><br><br>
+                        <!--list of links for quick links-->
                     </div>
                 </div>
                 <div class="credit">
@@ -100,14 +106,15 @@
 
         <script type="text/javascript">
             const searchInput = document.querySelector('.input')
-
             const clearButton = document.getElementById('clear')
+            
 
             clearButton.addEventListener("click", () => {
 
             })
 
             const articles = [{
+                    /* establishes a list of results */
                     article: 'green lizard'
                 },
                 {
@@ -203,10 +210,12 @@
             })
 
             clearButton.addEventListener("click", () => {
+                /*when clear button is pressed the clearlist function is performed */
                 clearList()
             })
 
             function setList(results) {
+                /* function for displaying results */
 
                 for (const artic of results) {
 
@@ -223,6 +232,7 @@
             }
 
             function clearList() {
+                /* function for clearing results */
                 while (list.firstChild) {
                     list.removeChild(list.firstChild)
                 }
