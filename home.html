@@ -66,36 +66,129 @@
 
 
         <script src="index.js">
-            const results = [
-                { article: 'green lizard'},
-                { article: 'pink lizard'},
-                { article: 'white lizard'},
-                { article: 'salamander'},
-                { article: 'blue lizard'},
-                { article: 'vulture'},
-                { article: 'drop wig'},
-                { article: 'monster kelp'},
-                { article: 'red leech'},
-                { article: 'blue leech'},
-                { article: 'miros bird'},
-                { article: 'brother long legs'},
-                { article: 'daddy long legs'},
-                { article: 'green lizard'},
-                { article: 'big spider'},
-                { article: 'spitter spider'},
-                { article: 'outskirts'},
-                { article: 'industril complex'},
-                { article: 'drainage system'},
-                { article: 'chimney canopy'},
-                { article: 'garbage wastes'},
-                { article: 'shaded citadel'},
-                { article: 'shoreline'},
-                { article: 'sky islands'},
-                { article: 'farm arrays'},
-                { article: 'the exterior'},
-                { article: 'five pebbles'},
-                { article: 'subterranean'}
+            const searchInput = document.querySelector('.input')
+
+            const clearButton = document.getElementById('clear')
+
+            clearButton.addEventListener("click", () => {
+
+            })
+
+            const articles = [{
+                    article: 'green lizard'
+                },
+                {
+                    article: 'pink lizard'
+                },
+                {
+                    article: 'white lizard'
+                },
+                {
+                    article: 'salamander'
+                },
+                {
+                    article: 'blue lizard'
+                },
+                {
+                    article: 'vulture'
+                },
+                {
+                    article: 'drop wig'
+                },
+                {
+                    article: 'monster kelp'
+                },
+                {
+                    article: 'red leech'
+                },
+                {
+                    article: 'blue leech'
+                },
+                {
+                    article: 'miros bird'
+                },
+                {
+                    article: 'brother long legs'
+                },
+                {
+                    article: 'daddy long legs'
+                },
+                {
+                    article: 'green lizard'
+                },
+                {
+                    article: 'big spider'
+                },
+                {
+                    article: 'spitter spider'
+                },
+                {
+                    article: 'outskirts'
+                },
+                {
+                    article: 'industril complex'
+                },
+                {
+                    article: 'drainage system'
+                },
+                {
+                    article: 'chimney canopy'
+                },
+                {
+                    article: 'garbage wastes'
+                },
+                {
+                    article: 'shaded citadel'
+                },
+                {
+                    article: 'shoreline'
+                },
+                {
+                    article: 'sky islands'
+                },
+                {
+                    article: 'farm arrays'
+                },
+                {
+                    article: 'the exterior'
+                },
+                {
+                    article: 'five pebbles'
+                },
+                {
+                    article: 'subterranean'
+                }
             ]
 
+            searchInput.addEventListener("input", (e) => {
+                let value = e.target.value
+
+                if (value && value.trim().length > 0) {
+                    value = value.trim().toLowerCase()
+
+
+                    setList(articles.filter(artic => {
+                        return artic.name.includes(value)
+                    }))
+                } else {
+
+                }
+            })
+
+            function setList(results) {
+
+                for (const artic of results) {
+
+                    const resultItem = document.createElement('li')
+
+                    resultItem.classList.add('result-item')
+
+                    const text = document.createTextNode(artic.name)
+
+                    resultItem.appendChild(text)
+
+                    list.appendChild(resultItem)
+                }
+            }
         </script>
 </body>
