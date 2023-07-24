@@ -5,35 +5,41 @@
         Home
     </title>
     <link rel="stylesheet" href="styles.css">
+    <!--links the stylesheet to home.html-->
 </head>
 
-<body>
+<body class="home">
 
     <div class="container">
+        <!-- the main grid which contains all of the grid rows and columns on the website-->
 
         <div class="box2">
 
             <img src="images/logo.png" alt="logo1" class="logo">
+            <!--link for the logo img-->
 
             <nav>
                 <a href="home.html">Home</a>
                 <a href="creatures.html">Creatures</a>
                 <a href="regions.html">Regions</a>
             </nav>
+            <!--links for the nav bar-->
+
         </div>
 
         <div class="box3">
+            <!--div class for box3 which contains main content box and quick links box-->
             <div class="tbox">
                 <div class="tbox2">
                     <h1>Rainworld <br> Survivor Campaign guide</h1>
                     <p>Rainworld is a game in which you play as a nomadic slug cat traversing
                         through an extremely harsh unforgiving environment, full of countless
                         deadly creatures that can easily kill you if you're not being extremely
-                        careful ehwe ef ew fuewfef ewfuewfewuf ewf ueuwpif ewf weuf ewuf ewu
-                        uefe eoeha ed eje the diofen a enffn a rrreur erbeueb u u ie i ie fb
-                        eritgerer tret retretet gt g rt sfrsfr fgt rgtrg a frefgrg gr sg hges
-                        fhuiwefhg ewf yeyuegryyfgreyugreuyg ryeuf r eryfg reuy gfer ger ger e
-                        eufh e e ge gie ge gueg erfuie ge geg fe giu gfef eiu geiufg uie e
+                        careful. Rainworld is a brilliant game, the game barely explains any
+                        of its mechanics, which leaves many players confused and frustrated,
+                        resulting in them likely giving up the game. This website will provide
+                        you with a basic guide on the Survivor campaign in Rainworld, giving
+                        information on various creatures and regions.
                     </p>
                 </div>
                 <img src="images/scug1.png" alt="scug11" class="scug1">
@@ -42,30 +48,39 @@
             <div class="qgrids">
                 <div class="qlinks">
                     <div class="qlinks1">
-                        <h2>Search:</h2>
+                        <h2>Search: </h2>
+                        <p>Type in the first letter of what you're looking for</p>
                         <form class="form">
                             <input id="search" type="text" class="input" placeholder="search..." />
-                            <button id="search1" class="search">Search</button>
                             <button id="clear" class="clear-results">clear</button>
                         </form><br>
+                        <!--creates the input field and clear button-->
                     </div>
                     <div class="qlinks2">
-                        <ul class="results-list" id="list"></ul>
+                        <ul class="results-list" id="list">
+
+                        </ul>
                     </div>
                     <div class="qlinks3">
                         <h2>Quick links:</h2>
                         <a href="creatures.html">Green Lizard</a><br><br>
                         <a href="creatures.html">Vulture</a><br><br>
                         <a href="creatures.html">Noodlefly</a><br><br>
-                        <a href="creatures.html">Green Lizard</a><br><br>
-                        <a href="creatures.html">Green Lizard</a><br><br>
+                        <a href="regions.html">Outskirts</a><br><br>
+                        <a href="creatures.html">Brother Long Legs</a><br><br>
+                        <!--list of links for quick links-->
+                    </div>
+                </div>
+                <div class="credit">
+                    <div class="credit2">
+                        <p>Background image by Videocult</p>
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <script src="index.js">
+        <script type="text/javascript">
             const searchInput = document.querySelector('.input')
 
             const clearButton = document.getElementById('clear')
@@ -75,6 +90,7 @@
             })
 
             const articles = [{
+                    /* establishes a list of results */
                     article: 'green lizard'
                 },
                 {
@@ -168,14 +184,20 @@
 
 
                     setList(articles.filter(artic => {
-                        return artic.name.includes(value)
+                        return artic.article.includes(value)
                     }))
                 } else {
-
+                    clearList()
                 }
             })
 
+            clearButton.addEventListener("click", () => {
+                /*when clear button is pressed the clearlist function is performed */
+                clearList()
+            })
+
             function setList(results) {
+                /* function for displaying results */
 
                 for (const artic of results) {
 
@@ -183,11 +205,18 @@
 
                     resultItem.classList.add('result-item')
 
-                    const text = document.createTextNode(artic.name)
+                    const text = document.createTextNode(artic.article)
 
                     resultItem.appendChild(text)
 
                     list.appendChild(resultItem)
+                }
+            }
+
+            function clearList() {
+                /* function for clearing results */
+                while (list.firstChild) {
+                    list.removeChild(list.firstChild)
                 }
             }
         </script>
