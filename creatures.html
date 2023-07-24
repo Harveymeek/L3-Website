@@ -5,45 +5,64 @@
         Creatures
     </title>
     <link rel="stylesheet" href="styles.css">
+    <!--links the stylesheet to home.html-->
 </head>
 
 <body class="creatures">
 
     <div class="container">
+        <!-- the main grid which contains all of the grid rows and columns on the website-->
 
         <div class="box2b">
 
             <img src="images/logo.png" alt="logo1" class="logo">
+            <!--link for the logo img-->
 
             <nav>
                 <a href="home.html">Home</a>
                 <a href="creatures.html">Creatures</a>
                 <a href="regions.html">Regions</a>
             </nav>
+            <!--links for the nav bar-->
+
         </div>
 
         <div class="box3">
+            <!--div class for box3 which contains main content box and quick links box-->
             <div class="tboxb">
                 <div class="contentbox">
                     <div class="tcontentbox">
 
                     </div>
-                    <img src="images/glizard.png" alt="glizard1" class="cimg"><br><p>Green Lizard</p>
-                    <img src="images/plizard.png" alt="glizard1" class="cimg"><br><p>Pink Lizard</p>
-                    <img src="images/wlizard.png" alt="glizard1" class="cimg"><br><p>White Lizard</p>
-                    <img src="images/salamander.png" alt="glizard1" class="cimg"><br><p>Slamander</p>
-                    <img src="images/ylizard.png" alt="glizard1" class="cimg"><br><p>Yellow Lizard</p>
-                    <img src="images/vulture.png" alt="glizard1" class="cimg"><br><p>Vulture</p>
-                    <img src="images/dwig.png" alt="glizard1" class="cimg"><br><p>Drop Wig</p>
-                    <img src="images/mkelp.png" alt="glizard1" class="cimg"><br><p>Monster Kelp</p>
-                    <img src="images/mbird.png" alt="glizard1" class="cimg"><br><p>Miros Bird</p>
-                    <img src="images/bll.png" alt="glizard1" class="cimg"><br><p>Brother Long Legs</p>
-                    <img src="images/dll.png" alt="glizard1" class="cimg"><br><p>Daddy Long Legs</p>
-                    <img src="images/bspider.png" alt="glizard1" class="cimg"><br><p>Big Spider</p>
-                    <img src="images/sspider.png" alt="glizard1" class="cimg"><br><p>Spitter Spider</p>
-                    <img src="images/nfly.png" alt="glizard1" class="cimg"><br><p>Noodle Fly</p>
-
-
+                    <img src="images/glizard.png" alt="glizard1" class="cimg"><br>
+                    <p>Green Lizard</p>
+                    <img src="images/plizard.png" alt="glizard1" class="cimg"><br>
+                    <p>Pink Lizard</p>
+                    <img src="images/wlizard.png" alt="glizard1" class="cimg"><br>
+                    <p>White Lizard</p>
+                    <img src="images/salamander.png" alt="glizard1" class="cimg"><br>
+                    <p>Slamander</p>
+                    <img src="images/ylizard.png" alt="glizard1" class="cimg"><br>
+                    <p>Yellow Lizard</p>
+                    <img src="images/vulture.png" alt="glizard1" class="cimg"><br>
+                    <p>Vulture</p>
+                    <img src="images/dwig.png" alt="glizard1" class="cimg"><br>
+                    <p>Drop Wig</p>
+                    <img src="images/mkelp.png" alt="glizard1" class="cimg"><br>
+                    <p>Monster Kelp</p>
+                    <img src="images/mbird.png" alt="glizard1" class="cimg"><br>
+                    <p>Miros Bird</p>
+                    <img src="images/bll.png" alt="glizard1" class="cimg"><br>
+                    <p>Brother Long Legs</p>
+                    <img src="images/dll.png" alt="glizard1" class="cimg"><br>
+                    <p>Daddy Long Legs</p>
+                    <img src="images/bspider.png" alt="glizard1" class="cimg"><br>
+                    <p>Big Spider</p>
+                    <img src="images/sspider.png" alt="glizard1" class="cimg"><br>
+                    <p>Spitter Spider</p>
+                    <img src="images/nfly.png" alt="glizard1" class="cimg"><br>
+                    <p>Noodle Fly</p>
+                    <!--list of images and text-->
                 </div>
                 <div class="tbox2b">
                     <div class="tbox3">
@@ -65,6 +84,7 @@
                             <input id="search" type="text" class="input" placeholder="search..." />
                             <button id="clear" class="clear-results">clear</button>
                         </form><br>
+                        <!--creates the input field and clear button-->
                     </div>
                     <div class="qlinks2">
                         <ul class="results-list" id="list">
@@ -76,8 +96,9 @@
                         <a href="creatures.html">Green Lizard</a><br><br>
                         <a href="creatures.html">Vulture</a><br><br>
                         <a href="creatures.html">Noodlefly</a><br><br>
-                        <a href="creatures.html">Pink Lizard</a><br><br>
+                        <a href="regions.html">Outskirts</a><br><br>
                         <a href="creatures.html">Brother Long Legs</a><br><br>
+                        <!--list of links for quick links-->
                     </div>
                 </div>
                 <div class="credit">
@@ -98,6 +119,7 @@
             })
 
             const articles = [{
+                    /* establishes a list of results */
                     article: 'green lizard'
                 },
                 {
@@ -193,10 +215,12 @@
             })
 
             clearButton.addEventListener("click", () => {
+                /*when clear button is pressed the clearlist function is performed */
                 clearList()
             })
 
             function setList(results) {
+                /* function for displaying results */
 
                 for (const artic of results) {
 
@@ -213,6 +237,7 @@
             }
 
             function clearList() {
+                /* function for clearing results */
                 while (list.firstChild) {
                     list.removeChild(list.firstChild)
                 }
