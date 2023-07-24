@@ -1,24 +1,24 @@
-body.home {
+body.home { /* establishes background for home page */
     background-image: url("images/bg1.png");
     background-size: 110vw 110vh;
 }
 
-body.creatures {
+body.creatures { /* establishes background for creatures page */
     background-image: url("images/bg2.png");
     background-size: 110vw 110vh;
 }
 
-body.regions {
+body.regions { /* establishes background for regions page */
     background-image: url("images/bg3.png");
     background-size: 110vw 110vh;
 }
 
-@font-face {
+@font-face { /* establishes font for navs, titles, etc. */
     font-family: navFont;
     src: url(fonts/Nexa-Heavy.ttf);
 }
 
-@font-face {
+@font-face { /* establishes font for content text */
     font-family: textFont;
     src: url(fonts/Calibri\ Regular.ttf);
 }
@@ -31,7 +31,7 @@ p, .qlinks a, .qlinksb a, .qlinksc a {
     font-family: textFont;
 }
 
-a:hover, .qlinks a:hover, .qlinksb a:hover, .qlinksc a:hover {
+a:hover, .qlinks a:hover, .qlinksb a:hover, .qlinksc a:hover { /* adds a hover state to links */
     color: black;
 }
 
@@ -66,14 +66,14 @@ form {
     grid-column: 2/2;
 }
 
-.box3 {
+.box3 { /* creates the grid for containing the main contents of the pages, establishes variables */
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-row: 3/3;
     grid-column: 2/2;
 }
 
-.tbox {
+.tbox { /* creates the grid for containing the main text and images, establishes variables */
     display: grid;
     grid-template-columns: 5fr 2fr;
     grid-row: 1/1;
@@ -90,7 +90,7 @@ form {
     grid-row: 1/2;
 }
 
-.contentbox {
+.contentbox { 
     display: grid;
     padding: 3vw;
     grid-row: 2/2;
@@ -100,7 +100,7 @@ form {
     grid-column: 2/2;
 }
 
-.tboxb {
+.tboxb { /* creates the grid for containing the main text and images of creature page, establishes variables */
     display: grid;
     grid-template-columns: 5fr;
     grid-template-rows: 0.3fr 1fr;
@@ -112,7 +112,7 @@ form {
     box-shadow: 0.3vw 0.6vw 1.2vw;
 }
 
-.tboxc {
+.tboxc { /* creates the grid for containing the main text and images of regions page, establishes variables */
     display: grid;
     grid-template-columns: 5fr;
     grid-template-rows: 0.3fr 1fr;
@@ -124,15 +124,20 @@ form {
     box-shadow: 0.3vw 0.6vw 1.2vw;
 }
 
-.scug1 {
+.scug1 { 
     height: 20vh;
 }
 
-.cimg {
+.cimg { /* establishes size, padding and the black border of the images in the main content box */
     padding: 1vh;
     height: 20vh;
     border: 0.3vw solid black;
+}
 
+.cimg2 {
+    padding: 1vh;
+    height: 15vh;
+    border: 0.3vw solid black;
 }
 
 .lizor {
@@ -140,7 +145,12 @@ form {
     padding: 5vh;
 }
 
-h1 {
+.map {
+    height: 30vh;
+    padding: 3vh;
+}
+
+h1 {  /* establishes positioning, size and color of title, nav, etc text */
     margin: 2vw;
     font-size: 5vh;
     color: white;
@@ -178,11 +188,11 @@ li {
     grid-row: 2/2;
 }
 
-.qlinks { 
+.qlinks { /* creates the grid for containing the search bar and quick links, establishes variables */
     display: grid;
     grid-template-rows: 0.1fr 0.1fr 0.1fr;
     grid-column: 2/3;
-    background-color: grey;
+    background-color: grey; 
     border-radius: 2.5vw;
     background-color: #4D4D4F;
     opacity: .9;
@@ -225,7 +235,7 @@ li {
     align-self: center;
 }
 
-nav {
+nav { /* creates the grid for containing the nav links, establishes variables */
     grid-row: 1/1;
     grid-column: 2/2;
     background-color: #4D4D4F;
@@ -264,7 +274,7 @@ nav {
     box-shadow: 0.3vw 0.6vw 1.2vw;
 }
 
-nav a {
+nav a { /* establishes positioning, size and color of nav links */
     margin: 9vw;
     color: white;
     text-decoration: none;
@@ -278,7 +288,7 @@ nav a {
     margin: 1.5vw;
 }
 
-.credit p {
+.credit p { /* establishes positioning, size and color of the credit text */
     color: white;
     text-decoration: none;
     font-size: 0.7vw;
