@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Creatures
+    </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="creatures">
+
+    <div class="container">
+
+        <div class="box2">
+
+            <img src="images/logo.png" alt="logo1" class="logo">
+
+            <nav>
+                <a href="home.html">Home</a>
+                <a href="creatures.html">Creatures</a>
+                <a href="regions.html">Regions</a>
+            </nav>
+        </div>
+
+        <div class="box3">
+            <div class="tbox">
+                <div class="tbox2">
+                    <h1>Rainworld <br> Survivor Campaign guide</h1>
+                    <p>Rainworld is a game in which you play as a nomadic slug cat traversing
+                        through an extremely harsh unforgiving environment, full of countless
+                        deadly creatures that can easily kill you if you're not being extremely
+                        careful. Rainworld is a brilliant game, the game barely explains any
+                        of its mechanics, which leaves many players confused and frustrated,
+                        resulting in them likely giving up the game. This website will provide
+                        you with a basic guide on the Survivor campaign in Rainworld, giving
+                        information on various creatures and regions.
+                    </p>
+                </div>
+                <img src="images/scug1.png" alt="scug11" class="scug1">
+            </div>
+
+            <div class="qgrids">
+                <div class="qlinks">
+                    <div class="qlinks1">
+                        <h2>Search: </h2>
+                        <p>Type in the first letter of what you're looking for</p>
+                        <form class="form">
+                            <input id="search" type="text" class="input" placeholder="search..." />
+                            <button id="clear" class="clear-results">clear</button>
+                        </form><br>
+                    </div>
+                    <div class="qlinks2">
+                        <ul class="results-list" id="list">
+
+                        </ul>
+                    </div>
+                    <div class="qlinks3">
+                        <h2>Quick links:</h2>
+                        <a href="creatures.html">Green Lizard</a><br><br>
+                        <a href="creatures.html">Vulture</a><br><br>
+                        <a href="creatures.html">Noodlefly</a><br><br>
+                        <a href="creatures.html">Pink Lizard</a><br><br>
+                        <a href="creatures.html">Brother Long Legs</a><br><br>
+                    </div>
+                </div>
+                <div class="credit">
+                    <div class="credit2">
+                        <p>Background image by Videocult</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            const searchInput = document.querySelector('.input')
+
+            const clearButton = document.getElementById('clear')
+
+            clearButton.addEventListener("click", () => {
+
+            })
+
+            const articles = [{
+                    article: 'green lizard'
+                },
+                {
+                    article: 'pink lizard'
+                },
+                {
+                    article: 'white lizard'
+                },
+                {
+                    article: 'salamander'
+                },
+                {
+                    article: 'blue lizard'
+                },
+                {
+                    article: 'vulture'
+                },
+                {
+                    article: 'drop wig'
+                },
+                {
+                    article: 'monster kelp'
+                },
+                {
+                    article: 'red leech'
+                },
+                {
+                    article: 'blue leech'
+                },
+                {
+                    article: 'miros bird'
+                },
+                {
+                    article: 'brother long legs'
+                },
+                {
+                    article: 'daddy long legs'
+                },
+                {
+                    article: 'green lizard'
+                },
+                {
+                    article: 'big spider'
+                },
+                {
+                    article: 'spitter spider'
+                },
+                {
+                    article: 'outskirts'
+                },
+                {
+                    article: 'industril complex'
+                },
+                {
+                    article: 'drainage system'
+                },
+                {
+                    article: 'chimney canopy'
+                },
+                {
+                    article: 'garbage wastes'
+                },
+                {
+                    article: 'shaded citadel'
+                },
+                {
+                    article: 'shoreline'
+                },
+                {
+                    article: 'sky islands'
+                },
+                {
+                    article: 'farm arrays'
+                },
+                {
+                    article: 'the exterior'
+                },
+                {
+                    article: 'five pebbles'
+                },
+                {
+                    article: 'subterranean'
+                }
+            ]
+
+            searchInput.addEventListener("input", (e) => {
+                let value = e.target.value
+
+                if (value && value.trim().length > 0) {
+                    value = value.trim().toLowerCase()
+
+
+                    setList(articles.filter(artic => {
+                        return artic.article.includes(value)
+                    }))
+                } else {
+                    clearList()
+                }
+            })
+
+            clearButton.addEventListener("click", () => {
+                clearList()
+            })
+
+            function setList(results) {
+
+                for (const artic of results) {
+
+                    const resultItem = document.createElement('li')
+
+                    resultItem.classList.add('result-item')
+
+                    const text = document.createTextNode(artic.article)
+
+                    resultItem.appendChild(text)
+
+                    list.appendChild(resultItem)
+                }
+            }
+
+            function clearList() {
+                while (list.firstChild) {
+                    list.removeChild(list.firstChild)
+                }
+            }
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
