@@ -77,9 +77,26 @@ form {
     box-shadow: 0.3vw 0.6vw 1.2vw;
 }
 
-.tboxb {
+.tbox2b {
     display: grid;
     grid-template-columns: 5fr 2fr;
+    grid-row: 1/2;
+}
+
+.contentbox {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-row: 2/2;
+}
+
+.tcontentbox {
+    grid-column: 2/2;
+}
+
+.tboxb {
+    display: grid;
+    grid-template-columns: 5fr;
+    grid-template-rows: 0.3fr 1fr;
     grid-row: 1/1;
     grid-column: 1/2;
     background-color: #5E0F39;
@@ -90,6 +107,16 @@ form {
 
 .scug1 {
     height: 20vh;
+}
+
+.cimg {
+    padding: 5vh;
+    height: 15vh;
+}
+
+.lizor {
+    height: 10vh;
+    padding: 5vh;
 }
 
 h1 {
@@ -122,7 +149,7 @@ li {
 
 .credit {
     display: grid;
-    grid-template-rows: 3fr 0.5fr;
+    grid-template-rows: 3fr 0.1fr;
     grid-column: 3/3;
 }
 
@@ -132,7 +159,7 @@ li {
 
 .qlinks { 
     display: grid;
-    grid-template-rows: 0.4fr 0.36fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr;
     grid-column: 2/3;
     background-color: grey;
     border-radius: 2.5vw;
@@ -143,7 +170,7 @@ li {
 
 .qlinksb { 
     display: grid;
-    grid-template-rows: 0.4fr 0.36fr 1fr;
+    grid-template-rows: 0.05fr 0.02fr 0.1fr;
     grid-column: 2/3;
     background-color: grey;
     border-radius: 2.5vw;
