@@ -27,11 +27,11 @@ nav a, h1, h2 {
     font-family: navFont;
 }
 
-p, .qlinks a {
+p, .qlinks a, .qlinksb a, .qlinksc a {
     font-family: textFont;
 }
 
-a:hover, .qlinks a:hover {
+a:hover, .qlinks a:hover, .qlinksb a:hover, .qlinksc a:hover {
     color: black;
 }
 
@@ -46,6 +46,20 @@ form {
 }
 
 .box2 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-row: 1/2;
+    grid-column: 2/2;
+}
+
+.box2b {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-row: 1/2;
+    grid-column: 2/2;
+}
+
+.box2c {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-row: 1/2;
@@ -70,8 +84,64 @@ form {
     box-shadow: 0.3vw 0.6vw 1.2vw;
 }
 
+.tbox2b {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-row: 1/2;
+}
+
+.contentbox {
+    display: grid;
+    padding: 3vw;
+    grid-row: 2/2;
+}
+
+.tcontentbox {
+    grid-column: 2/2;
+}
+
+.tboxb {
+    display: grid;
+    grid-template-columns: 5fr;
+    grid-template-rows: 0.3fr 1fr;
+    grid-row: 1/1;
+    grid-column: 1/2;
+    background-color: #5E0F39;
+    border-radius: 2.5vw;
+    opacity: .9;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
+}
+
+.tboxc {
+    display: grid;
+    grid-template-columns: 5fr;
+    grid-template-rows: 0.3fr 1fr;
+    grid-row: 1/1;
+    grid-column: 1/2;
+    background-color: #005E56;
+    border-radius: 2.5vw;
+    opacity: .9;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
+}
+
 .scug1 {
     height: 20vh;
+}
+
+.cimg {
+    padding: 1vh;
+    height: 20vh;
+    border: 0.3vw solid black;
+}
+
+.lizor {
+    height: 10vh;
+    padding: 5vh;
+}
+
+.map {
+    height: 30vh;
+    padding: 3vh;
 }
 
 h1 {
@@ -104,7 +174,7 @@ li {
 
 .credit {
     display: grid;
-    grid-template-rows: 3fr 0.5fr;
+    grid-template-rows: 3fr 0.1fr;
     grid-column: 3/3;
 }
 
@@ -114,11 +184,33 @@ li {
 
 .qlinks { 
     display: grid;
-    grid-template-rows: 0.4fr 0.36fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr;
     grid-column: 2/3;
     background-color: grey;
     border-radius: 2.5vw;
     background-color: #4D4D4F;
+    opacity: .9;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
+}
+
+.qlinksb { 
+    display: grid;
+    grid-template-rows: 0.05fr 0.02fr 0.1fr;
+    grid-column: 2/3;
+    background-color: grey;
+    border-radius: 2.5vw;
+    background-color: #5E0F39;
+    opacity: .9;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
+}
+
+.qlinksc { 
+    display: grid;
+    grid-template-rows: 0.05fr 0.02fr 0.1fr;
+    grid-column: 2/3;
+    background-color: grey;
+    border-radius: 2.5vw;
+    background-color: #005E56;
     opacity: .9;
     box-shadow: 0.3vw 0.6vw 1.2vw;
 }
@@ -150,6 +242,32 @@ nav {
     box-shadow: 0.3vw 0.6vw 1.2vw;
 }
 
+.box2b nav {
+    grid-row: 1/1;
+    grid-column: 2/2;
+    background-color: #5E0F39;
+    opacity: .9;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    padding: 0.6vw 0.6vw;
+    border-radius: 25vw;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
+}
+
+.box2c nav {
+    grid-row: 1/1;
+    grid-column: 2/2;
+    background-color: #005E56;
+    opacity: .9;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    padding: 0.6vw 0.6vw;
+    border-radius: 25vw;
+    box-shadow: 0.3vw 0.6vw 1.2vw;
+}
+
 nav a {
     margin: 9vw;
     color: white;
@@ -157,7 +275,7 @@ nav a {
     font-size: 2.8vh;
 }
 
-.qlinks a {
+.qlinks a, .qlinksb a, .qlinksc a {
     color: white;
     text-decoration: none;
     font-size: 2.3vh;
